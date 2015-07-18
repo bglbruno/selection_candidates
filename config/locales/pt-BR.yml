@@ -1,5 +1,12 @@
 pt-BR:
+  app:
+    name: 'Seleção de candidatos'
   feedback_candidates:
     message:
       subject: 'Obrigado por se candidatar' 
       content: 'Obrigado por se candidatar, assim que tivermos uma vaga disponível para programador %{type} entraremos em contato.'
+  programmer:
+    front_end: 'Front-end'
+    back_end: 'Back-end'
+    mobile: 'Mobile'
+    generic: ''

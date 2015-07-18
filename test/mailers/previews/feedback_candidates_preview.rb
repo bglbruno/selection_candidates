@@ -12,8 +12,8 @@ class FeedbackCandidatesPreview < ActionMailer::Preview
     FeedbackCandidates.mobile(email_candidate)
   end
 
-  def default
-    FeedbackCandidates.default(email_candidate)
+  def generic
+    FeedbackCandidates.generic(email_candidate)
   end
 
   private 
