@@ -1,0 +1,5 @@
+pt-BR:
+  feedback_candidates:
+    message:
+      subject: 'Obrigado por se candidatar' 
+      content: 'Obrigado por se candidatar, assim que tivermos uma vaga disponível para programador %{type} entraremos em contato.'
