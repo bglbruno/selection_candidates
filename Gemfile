@@ -10,6 +10,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'master'
+gem 'simple_form'
+gem 'bootstrap-sass'
 
 group :development, :test do
   gem 'byebug'
