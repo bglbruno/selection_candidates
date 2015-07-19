@@ -10,3 +10,14 @@ pt-BR:
     back_end: 'Back-end'
     mobile: 'Mobile'
     generic: ''
+  layouts:
+    application:
+      title: 'Seleção de candidatos'
+  candidates:
+    form:
+      box:
+        candidate: 'Suas informações pessoais'
+        knowledge_assessment:
+          title: 'Avaliação de conhecimento'
+          hint: 'Avalie de 0 à 10 o seu nível de conhecimento nas áreas abaixo'
+

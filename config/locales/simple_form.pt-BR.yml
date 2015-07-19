@@ -5,22 +5,25 @@ pt-BR:
       mark: '*'
     error_notification:
       default_message: "Por favor, preencha corretamente o formulário"
-    # Examples
-    # labels:
-    #   defaults:
-    #     password: 'Password'
-    #   user:
-    #     new:
-    #       email: 'E-mail to sign in.'
-    #     edit:
-    #       email: 'E-mail.'
-    # hints:
-    #   defaults:
-    #     username: 'User name to sign in.'
-    #     password: 'No special characters, please.'
-    # include_blanks:
-    #   defaults:
-    #     age: 'Rather not say'
-    # prompts:
-    #   defaults:
-    #     age: 'Select your age'
+    labels:
+      candidate:
+        name: 'Nome'
+        email: 'E-mail'
+        knowledge_assessment:
+          html: 'HTML'
+          css: 'CSS'
+          javascript: 'Javascript'
+          python: 'Python'
+          django: 'Django'
+          dev_ios: 'Desenvolvimento iOS'
+          dev_android: 'Desenvolvimento Android'
+    hints:
+      candidate:
+        name: 'Informe seu nome completo'
+        email: 'Informe seu e-mail para entrarmos em contato com você'
+    #include_blanks:
+    #  defaults:
+    #    age: ''
+    #prompts:
+    #  defaults:
+    #    age: 'Select your age'

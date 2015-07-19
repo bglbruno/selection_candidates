@@ -1,19 +1,48 @@
 <%= simple_form_for @candidate do |f| %>
   <%= f.error_notification %>
 
-  <%= f.input :name %>
-  <%= f.input :email %>
-  
-  <%= f.simple_fields_for :knowledge_assessment do |k| %>
-    <%= k.input :html, collection: 0..10 %>
-    <%= k.input :css, collection: 0..10 %>
-    <%= k.input :javascript, collection: 0..10 %>
-    <%= k.input :python, collection: 0..10 %>
-    <%= k.input :django, collection: 0..10 %>
-    <%= k.input :dev_ios, collection: 0..10 %>
-    <%= k.input :dev_android, collection: 0..10 %>
-  <% end%>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">
+        <h3><%= t('.box.candidate') %></h3>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="col-xs-12 col-md-6">
+        <%= f.input :name %>
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <%= f.input :email %>
+      </div>
+    </div>
+  </div>
 
-  <%= f.submit %>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">
+        <h3>
+          <%= t('.box.knowledge_assessment.title') %>
+          <small><%= t('.box.knowledge_assessment.hint') %></small>
+        </h3>
+      </div>
+    </div>
+    <div class="panel-body">
+      <%= f.simple_fields_for :knowledge_assessment do |k| %>
+        <%= k.input :html, collection: 0..10 %>
+        <%= k.input :css, collection: 0..10 %>
+        <%= k.input :javascript, collection: 0..10 %>
+        <%= k.input :python, collection: 0..10 %>
+        <%= k.input :django, collection: 0..10 %>
+        <%= k.input :dev_ios, collection: 0..10 %>
+        <%= k.input :dev_android, collection: 0..10 %>
+      <% end%>
+    </div>
+  </div>
+  
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <%= f.submit class: 'btn btn-primary btn-xg' %>
+    </div>
+  </div>
 
 <% end %>
