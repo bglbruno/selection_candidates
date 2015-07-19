@@ -12,6 +12,7 @@ gem 'turbolinks'
 gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'master'
 gem 'simple_form'
 gem 'bootstrap-sass'
+gem "mongoid", "~> 4.0.0"
 
 group :development, :test do
   gem 'byebug'
