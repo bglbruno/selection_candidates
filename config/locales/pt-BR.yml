@@ -17,6 +17,7 @@ pt-BR:
     show:
       thanks_message: 'Obrigado por participar da seleção de candidatos. Em breve você receberá um e-mail com maiores informações.'
     form:
+      create: "Enviar candidatura"
       box:
         candidate: 'Suas informações pessoais'
         knowledge_assessment:
