@@ -13,4 +13,25 @@ class KnowledgeAssessment
             numericality: { even: true}, inclusion: { in: [0..10] }
 
   belongs_to :candidate
+
+  def is_front_end?
+    points_for(html) && points_for(css) && points_for(javascript)
+  end
+
+  def it_back_end?
+    points_for(python) && points_for(django)
+  end
+
+  def is_mobile?
+    points_for(dev_ios) && points_for(dev_android)
+  end
+
+  def is_generic?
+    !is_front_end? && !is_back_end? && !is_mobile?
+  end
+
+  private
+    def points_for(points)
+      (7..10).include(points)
+    end
 end

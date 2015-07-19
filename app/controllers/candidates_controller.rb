@@ -7,7 +7,8 @@ class CandidatesController < ApplicationController
   def create
     @candidate = Candidate.new(candidate_params)
 
-    if @candidate.valid?
+    if @candidate.save
+      @candidate.send_feedback
       redirect_to @candidate, notice: I18n.t(:success, scope: :essages)
     else
       render :index
@@ -15,7 +16,6 @@ class CandidatesController < ApplicationController
   end
 
   def show
-
   end
 
   private
