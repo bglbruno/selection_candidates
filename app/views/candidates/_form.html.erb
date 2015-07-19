@@ -1,0 +1,19 @@
+<%= simple_form_for @candidate do |f| %>
+  <%= f.error_notification %>
+
+  <%= f.input :name %>
+  <%= f.input :email %>
+  
+  <%= f.simple_fields_for :knowledge_assessment do |k| %>
+    <%= k.input :html, collection: 0..10 %>
+    <%= k.input :css, collection: 0..10 %>
+    <%= k.input :javascript, collection: 0..10 %>
+    <%= k.input :python, collection: 0..10 %>
+    <%= k.input :django, collection: 0..10 %>
+    <%= k.input :dev_ios, collection: 0..10 %>
+    <%= k.input :dev_android, collection: 0..10 %>
+  <% end%>
+
+  <%= f.submit %>
+
+<% end %>
