@@ -3,15 +3,15 @@ class Candidate
   field :name, type: String
   field :email, type: String
 
+  has_one :knowledge_assessment, dependent: :delete, autosave: true
+
   validates_presence_of :name, :email
-
-  has_one :knowledge_assessment, dependent: :delete, validate: true
-
+  accepts_nested_attributes_for :knowledge_assessment
 
   def send_feedback
-    FeedbackCandidateMailer.front_end(email) if knowledge_assessment.is_front_end?
-    FeedbackCandidateMailer.back_end(email) if knowledge_assessment.is_back_end?
-    FeedbackCandidateMailer.mobile(email) if knowledge_assessment.is_mobile?
-    FeedbackCandidateMailer.generic(email) if knowledge_assessment.is_generic?
+    FeedbackCandidatesMailer.front_end(email).deliver if knowledge_assessment.is_front_end?
+    FeedbackCandidatesMailer.back_end(email).deliver if knowledge_assessment.is_back_end?
+    FeedbackCandidatesMailer.mobile(email).deliver if knowledge_assessment.is_mobile?
+    FeedbackCandidatesMailer.generic(email).deliver if knowledge_assessment.is_generic?
   end
 end

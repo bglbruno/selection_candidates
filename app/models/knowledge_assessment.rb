@@ -10,7 +10,7 @@ class KnowledgeAssessment
 
 
   validates :html, :css, :javascript, :python, :django, :dev_ios, :dev_android,
-            numericality: { even: true}, inclusion: { in: [0..10] }
+            numericality: true
 
   belongs_to :candidate
 
@@ -18,7 +18,7 @@ class KnowledgeAssessment
     points_for(html) && points_for(css) && points_for(javascript)
   end
 
-  def it_back_end?
+  def is_back_end?
     points_for(python) && points_for(django)
   end
 
@@ -32,6 +32,6 @@ class KnowledgeAssessment
 
   private
     def points_for(points)
-      (7..10).include(points)
+      (7..10).include?(points)
     end
 end
