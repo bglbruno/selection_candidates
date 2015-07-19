@@ -23,4 +23,6 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.3.3'
+  gem 'capybara'
+  gem 'factory_girl_rails'
 end
