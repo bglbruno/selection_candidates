@@ -20,13 +20,11 @@
   <div class="panel panel-default">
     <div class="panel-heading">
       <div class="panel-title">
-        <h3>
-          <%= t('.box.knowledge_assessment.title') %>
-          <small><%= t('.box.knowledge_assessment.hint') %></small>
-        </h3>
+        <h3><%= t('.box.knowledge_assessment.title') %></h3>
       </div>
     </div>
     <div class="panel-body">
+      <p><%= t('.box.knowledge_assessment.hint') %></p>
       <%= f.simple_fields_for :knowledge_assessment do |k| %>
         <%= k.input :html, collection: 0..10 %>
         <%= k.input :css, collection: 0..10 %>
