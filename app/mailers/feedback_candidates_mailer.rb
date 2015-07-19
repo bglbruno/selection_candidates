@@ -1,4 +1,4 @@
-class FeedbackCandidates < ApplicationMailer
+class FeedbackCandidatesMailer < ApplicationMailer
 
   def front_end(email)
     @content = I18n.t('feedback_candidates.message.content', type: I18n.t('programmer.front_end'))
