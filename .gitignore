@@ -13,3 +13,4 @@
 /tmp
 *.swp
 *.swo
+/spec/mailers/previews
