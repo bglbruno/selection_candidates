@@ -16,6 +16,7 @@ pt-BR:
   candidates:
     show:
       thanks_message: '%{name}, obrigado por participar da seleção de candidatos. Um email será enviado para %{email} com maiores informações.'
+      new_candidature: 'Nova candidatura'
     form:
       create: "Enviar candidatura"
       box:

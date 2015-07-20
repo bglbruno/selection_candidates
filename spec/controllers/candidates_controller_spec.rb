@@ -23,9 +23,9 @@ RSpec.describe CandidatesController, type: :controller do
   # This should return the minimal set of attributes required to create a valid
   # Candidate. As you add validations to Candidate, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { attributes_for :candidate }
+  let(:valid_attributes) { attributes_for(:candidate).merge(knowledge_assessment_attributes: attributes_for(:knowledge_assessment)) }
 
-  let(:invalid_attributes) { attributes_for :candidate }
+  let(:invalid_attributes) { attributes_for :candidate, :invalid }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
