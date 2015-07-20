@@ -1,7 +1,7 @@
 <div class="panel panel-default">
   <div class="panel-body">
     <div class="alert alert-info" role="alert">
-      <%= t('.thanks_message') %>
+      <%= t('.thanks_message', name: @candidate.name.capitalize, email: @candidate.email) %>
     </div>
     <%= link_to t('.new_candidature'), root_path, class: 'btn btn-primary btn-lg' %>
   </div>

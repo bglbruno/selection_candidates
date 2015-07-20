@@ -15,7 +15,7 @@ pt-BR:
       title: 'Seleção de candidatos'
   candidates:
     show:
-      thanks_message: 'Obrigado por participar da seleção de candidatos. Em breve você receberá um e-mail com maiores informações.'
+      thanks_message: '%{name}, obrigado por participar da seleção de candidatos. Um email será enviado para %{email} com maiores informações.'
     form:
       create: "Enviar candidatura"
       box:
