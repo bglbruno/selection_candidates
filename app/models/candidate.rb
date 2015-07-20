@@ -9,9 +9,9 @@ class Candidate
   accepts_nested_attributes_for :knowledge_assessment
 
   def send_feedback
-    FeedbackCandidatesMailer.front_end(email).deliver if knowledge_assessment.is_front_end?
-    FeedbackCandidatesMailer.back_end(email).deliver if knowledge_assessment.is_back_end?
-    FeedbackCandidatesMailer.mobile(email).deliver if knowledge_assessment.is_mobile?
-    FeedbackCandidatesMailer.generic(email).deliver if knowledge_assessment.is_generic?
+    FeedbackCandidatesMailer.front_end(email).deliver_now if knowledge_assessment.is_front_end?
+    FeedbackCandidatesMailer.back_end(email).deliver_now if knowledge_assessment.is_back_end?
+    FeedbackCandidatesMailer.mobile(email).deliver_now if knowledge_assessment.is_mobile?
+    FeedbackCandidatesMailer.generic(email).deliver_now if knowledge_assessment.is_generic?
   end
 end

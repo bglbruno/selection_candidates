@@ -1,4 +1,4 @@
-class KnowledgeAssessment
+class KnowledgeAgsessment
   include Mongoid::Document
   field :html, type: Integer
   field :css, type: Integer
