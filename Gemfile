@@ -14,6 +14,7 @@ gem 'simple_form'
 gem 'bootstrap-sass'
 gem "mongoid", "~> 4.0.0"
 gem 'bootswatch-rails'
+gem 'puma'
 
 group :development, :test do
   gem 'byebug'
@@ -26,4 +27,8 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'mongoid-rspec', '~> 2.1.0'
+end
+
+group :production, :staging do
+  gem 'rails_12factor'
 end
